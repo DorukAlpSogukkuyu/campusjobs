@@ -31,16 +31,30 @@ This section outlines the steps to set up and run the project locally.
 
 ### 2. Obtain Project Files
 
-You will need the following two files to run the project:
-- `campusjobs.py` (Python code for the Flask app)
+- extract campusjobs.py to a folder that you want.
 
-Extract the campusjobs.zip file to a file that you choose.
+You will need the following files to run the project:
+- `campusjobs.py` &nbsp;&nbsp;&nbsp;*(Python code for the Flask app)*
+- `table_creation.txt` &nbsp;&nbsp;&nbsp;*(SQL table definitions)*
+- `sample_data.txt` &nbsp;&nbsp;&nbsp;*(Optional: sample records for testing)*
+
+#### **Select the Python Interpreter in VSCode**
+
+> If you are using Visual Studio Code (VSCode), you need to select the correct Python interpreter before running the project.
+
+1. Open `campusjobs.py` in VSCode.
+2. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open the command palette.
+3. Type **Python: Select Interpreter** and select it from the list.
+4. Choose the Python version you installed (e.g., Python 3.11.x).
+5. Now you can run your code with the correct interpreter.
+
+This ensures that VSCode uses the right Python environment when you run the project.
 
 ### 3. Install Required Python Libraries
 
 Open a terminal (Command Prompt or PowerShell) and run:
 ```bash
-pip install Flask psycopg2-binary Werkzeug
+python -m pip install Flask psycopg2-binary Werkzeug
 ```
 
 ### 4. Set Up the Database
