@@ -81,7 +81,7 @@ python -m pip install Flask psycopg2-binary Werkzeug
 - Paste into the Query Tool and execute again to insert sample records.
 
 ## IMPORTANT
-- Be sure to paste the codes to the database that you just created, otherwise you might not connect the database at the next step.
+- Be sure to paste and execute the codes to the correct database, otherwise you might not connect the database at the next step.
 
 
 ### 5. Update Database Connection Settings
