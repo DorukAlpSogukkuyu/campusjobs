@@ -80,6 +80,9 @@ python -m pip install Flask psycopg2-binary Werkzeug
 - Copy all its content.
 - Paste into the Query Tool and execute again to insert sample records.
 
+## IMPORTANT
+- Be sure to paste the codes to the database that you just created, otherwise you might not connect the database at the next step.
+
 
 ### 5. Update Database Connection Settings
 Open campusjobs.py in a text editor (VSCode). At the top of the file, update the database connection details according to your PostgreSQL setup:
