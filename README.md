@@ -1,57 +1,147 @@
-project:
-  name: CampusJobs – On-Campus Job Posting Platform
-  description: |
-    CampusJobs is a web application designed to connect students seeking part-time or full-time jobs within the university campus with local businesses and employers. Students can easily find jobs that fit their class schedules, while employers can post job openings to reach dynamic and talented METU students for their staffing needs.
-    This project was developed for the CEIT390 course, using Flask (a Python web framework) and a PostgreSQL database.
-  technologies:
-    backend: Python (Flask)
-    database: PostgreSQL
-    frontend: HTML, CSS
-    libraries:
-      - psycopg2-binary (PostgreSQL connectivity)
-      - Werkzeug (password hashing / security)
+# CampusJobs – On-Campus Job Posting Platform
 
-installation_and_run:
-  prerequisites:
-    - Python 3.7+ (https://www.python.org/downloads/)
-    - PostgreSQL (https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
-    - pgAdmin (included with PostgreSQL installer)
-  files_needed:
-    - campusjobs.py
-    - table_creation.txt
-    - sample_data.txt
-  steps:
-    - step: Extract the campusjobs.zip file to your desired location.
-    - step: Install required Python libraries
-      code: |
-        pip install Flask psycopg2-binary Werkzeug
-    - step: Open pgAdmin and create a new database (e.g., campusjobs).
-    - step: In the new database, open Query Tool.
-    - step: Copy all SQL code from table_creation.txt and execute in Query Tool to create tables.
-    - step: (Optional) Copy and execute all code from sample_data.txt to insert sample data.
-    - step: Update DB connection settings in campusjobs.py
-      details: |
-        DB_HOST = "localhost"
-        DB_NAME = "campusjobs"
-        DB_USER = "postgres"
-        DB_PASS = "your_password"
-    - step: Run the application
-      code: |
-        python campusjobs.py
-    - step: Open browser at http://127.0.0.1:5000/
+## Project Description
 
-usage:
-  homepage: General info, login/register buttons
-  students:
-    - Register with school email ending with .edu.tr
-    - View, filter, and favorite job postings
-    - Apply to jobs via email
-  employers:
-    - Register with any email
-    - Add, update, and remove job postings
-  password_policy: Passwords must be at least 8 characters, with uppercase, lowercase, and numbers
+CampusJobs is a web application designed to connect students seeking part-time or full-time jobs within the university campus with local businesses and employers. Students can easily find jobs that fit their class schedules, while employers can post job openings to reach dynamic and talented METU students for their staffing needs.
 
-notes:
-  - Project is for educational purposes; some security features are not included.
-  - Passwords are hashed using werkzeug.security.
-  - Database schema follows CEIT390 requirements.
+This project was developed for the CEIT390 course, using Flask (a Python web framework) and a PostgreSQL database.
+
+## Technologies Used
+
+- **Backend:** Python (Flask)
+- **Database:** PostgreSQL
+- **Frontend:** HTML, CSS
+
+**Additional Libraries:**
+- `psycopg2-binary`: For PostgreSQL connectivity.
+- `Werkzeug`: For password hashing (security).
+
+---
+
+## Installation and Running Instructions
+
+This section outlines the steps to set up and run the project locally.
+
+### 1. Prerequisites
+
+- **Python 3.7+**: Ensure Python is installed on your machine. [Download Python](https://www.python.org/downloads/)
+- **PostgreSQL**: Make sure the PostgreSQL database server is installed and running. [Download PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+    - During installation, you will be asked to set a username (e.g., `postgres`) and password. You will need these later.
+- **pgAdmin**: A database management tool like pgAdmin is recommended for easier database management. You should get this when you download and install PostgreSQL.
+
+### 2. Obtain Project Files
+
+You will need the following two files to run the project:
+- `campusjobs.py` (Python code for the Flask app)
+
+Extract the campusjobs.zip file to a file that you choose.
+
+### 3. Install Required Python Libraries
+
+Open a terminal (Command Prompt or PowerShell) and run:
+```bash
+pip install Flask psycopg2-binary Werkzeug
+```
+
+### **4. Set Up the Database**
+Open pgAdmin
+  Launch pgAdmin on your computer.
+
+Create a New Database
+
+  Right-click on Databases in the left panel.
+
+  Select Create > Database...
+  
+  Enter a name (e.g., campusjobs) and click Save.
+
+Create the Tables
+
+  Select your new database from the left panel.
+
+  Click on Tools > Query Tool.
+
+  Open the project folder on your computer and find the file named table_creation.txt.
+
+  Copy all the SQL code from table_creation.txt.
+
+  Paste the copied code into the Query Tool in pgAdmin.
+
+  Click the Execute button to create the tables.
+
+Insert Sample Data
+
+  Open sample_data.txt from the project folder.
+
+  Copy all its content.
+  
+  Paste into the Query Tool and execute again to insert sample records.
+
+### 5. Update Database Connection Settings
+Open campusjobs.py in a text editor (VSCode). At the top of the file, update the database connection details according to your PostgreSQL setup:
+
+DB_HOST = "localhost"   # Address of your PostgreSQL server, usually "localhost" or "127.0.0.1"
+DB_NAME = "campusjobs"  # Name of the database where you loaded the SQL file
+DB_USER = "postgres"    # Your PostgreSQL username
+DB_PASS = "1234"        # Password for the above user
+
+IMPORTANT:
+DB_HOST: Remains localhost unless your database is on another server.
+
+DB_NAME: Use the name of the database where you imported campusjobs.sql.
+
+DB_USER: Your PostgreSQL user (set during installation).
+
+DB_PASS: Password for the above user.
+
+If these settings are incorrect, the application will not be able to connect to the database.
+
+### 6. Running the Application
+In the terminal, navigate to the folder containing campusjobs.py and run:
+
+python campusjobs.py
+
+Or open campusjobs.py in VSCode and run the code.
+
+You should see output like:
+
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: xxx-xxx-xxx
+
+Open a web browser and go to http://127.0.0.1:5000/. The CampusJobs application should appear.
+
+### Usage
+Homepage: General information and login/register buttons.
+
+Account Creation:
+
+Students can register using their school email address ending with .edu.tr.
+
+Employers can register with any email address.
+
+Passwords must be at least 8 characters long and include uppercase, lowercase letters, and numbers.
+
+Login: Users log in with their registered email and password.
+
+Student Interface:
+View Listings: Filter and sort all active job postings.
+
+Favorites: Add job postings to favorites for easy tracking.
+
+Apply: Use the "Apply via Email" button in job details to contact the employer's email address.
+
+Employer Interface:
+Add Job Posting: Create new job listings.
+
+My Listings: View, remove and update job postings they have created.
+
+### Notes
+This project was developed for educational purposes. Some advanced security features (e.g., extensive XSS protection, CSRF tokens) and complex features (such as email verification and password reset) are not included.
+
+Passwords are securely hashed in the database using the werkzeug.security library.
+
+The database schema and relationships were designed according to CEIT390 course requirements.
+
+Happy testing!
