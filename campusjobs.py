@@ -332,7 +332,7 @@ def edit_job(job_id):
 
             if not all([title, description, working_days, working_hours, total_hours_str, daily_salary_str, job_duration, job_type, location]):
                 flash("Lütfen tüm zorunlu alanları doldurun.", "danger")
-                # Formu güncel verilerle tekrar render etmek için job sözlüğünü request.form ile güncelleyelim
+                # Formu güncel verilerle tekrar render etmek için job sözlüğünü request.form ile güncelleme
                 current_form_data = dict(job) # Mevcut job verilerini al
                 current_form_data.update(request.form) # Üzerine formdan gelenleri yaz
                 return render_template_string(JOB_FORM_TEMPLATE, page_title="İlanı Güncelle", job=current_form_data)
@@ -366,7 +366,7 @@ def edit_job(job_id):
                 print(f"İlan güncelleme hatası: {e}")
                 flash(f"İlan güncellenirken bir hata oluştu: {e}", "danger")
         
-        # GET isteği için veya POST'ta hata olursa formu dolu göster
+        # GET isteği için veya POST'ta hata olursa formu dolu gösterme
         return render_template_string(JOB_FORM_TEMPLATE, page_title="İlanı Güncelle", job=job)
 
     except Exception as e:
