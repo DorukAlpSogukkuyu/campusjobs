@@ -1,0 +1,45 @@
+CREATE TABLE IF NOT EXISTS students (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    school_email VARCHAR(255) UNIQUE NOT NULL, -- .edu.tr kontrolü uygulama tarafında yapılacak
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS employers (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    company_name VARCHAR(255), -- Opsiyonel şirket adı
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS jobs (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    working_days VARCHAR(255) NOT NULL,
+    working_hours VARCHAR(255) NOT NULL,
+    total_hours REAL NOT NULL,
+    daily_salary INTEGER NOT NULL,
+    hourly_salary REAL, -- Otomatik hesaplanacak
+    job_duration VARCHAR(100) NOT NULL,
+    job_type VARCHAR(100) NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    contact_email VARCHAR(255), 
+    employer_id INTEGER NOT NULL, -- employers tablosuna FOREIGN KEY
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (employer_id) REFERENCES employers(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS favorites (
+    student_id INTEGER NOT NULL, -- students tablosuna FOREIGN KEY
+    job_id INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (student_id, job_id),
+    FOREIGN KEY (student_id) REFERENCES students(id) ON DELETE CASCADE,
+    FOREIGN KEY (job_id) REFERENCES jobs(id) ON DELETE CASCADE
+);

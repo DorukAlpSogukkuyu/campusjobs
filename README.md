@@ -1,0 +1,122 @@
+# CampusJobs – On-Campus Job Posting Platform
+
+## Project Description
+
+CampusJobs is a web application designed to connect students seeking part-time or full-time jobs within the university campus with local businesses and employers. Students can easily find jobs that fit their class schedules, while employers can post job openings to reach dynamic and talented METU students for their staffing needs.
+
+This project was developed for the CEIT390 course, using Flask (a Python web framework) and a PostgreSQL database.
+
+## Technologies Used
+
+- **Backend:** Python (Flask)
+- **Database:** PostgreSQL
+- **Frontend:** HTML, CSS
+
+**Additional Libraries:**
+- `psycopg2-binary`: For PostgreSQL connectivity.
+- `Werkzeug`: For password hashing (security).
+
+---
+
+## Installation and Running Instructions
+
+This section outlines the steps to set up and run the project locally.
+
+### 1. Prerequisites
+
+- **Python 3.7+**: Ensure Python is installed on your machine. [Download Python](https://www.python.org/downloads/)
+- **PostgreSQL**: Make sure the PostgreSQL database server is installed and running. [Download PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+    - During installation, you will be asked to set a username (e.g., `postgres`) and password. You will need these later.
+- **pgAdmin**: A database management tool like pgAdmin is recommended for easier database management. You should get this when you download and install PostgreSQL.
+
+### 2. Obtain Project Files
+
+You will need the following two files to run the project:
+- `campusjobs.py` (Python code for the Flask app)
+
+Extract the campusjobs.zip file to a file that you choose.
+
+### 3. Install Required Python Libraries
+
+Open a terminal (Command Prompt or PowerShell) and run:
+```bash
+pip install Flask psycopg2-binary Werkzeug
+```
+
+4. Set Up the Database
+Open the table_creation.txt file inside the project archive, copy the SQL commands.
+
+Open pgAdmin, create a new database (e.g., campusjobs).
+
+In the Query Tool, paste and execute the SQL commands to set up the schema.
+
+Optionally, insert sample data from sample_data.txt if you want. You can copy, paste and execute in the query tool
+
+### 5. Update Database Connection Settings
+Open campusjobs.py in a text editor (VSCode). At the top of the file, update the database connection details according to your PostgreSQL setup:
+
+DB_HOST = "localhost"   # Address of your PostgreSQL server, usually "localhost" or "127.0.0.1"
+DB_NAME = "campusjobs"  # Name of the database where you loaded the SQL file
+DB_USER = "postgres"    # Your PostgreSQL username
+DB_PASS = "1234"        # Password for the above user
+
+IMPORTANT:
+DB_HOST: Remains localhost unless your database is on another server.
+
+DB_NAME: Use the name of the database where you imported campusjobs.sql.
+
+DB_USER: Your PostgreSQL user (set during installation).
+
+DB_PASS: Password for the above user.
+
+If these settings are incorrect, the application will not be able to connect to the database.
+
+### 6. Running the Application
+In the terminal, navigate to the folder containing campusjobs.py and run:
+
+python campusjobs.py
+
+Or open campusjobs.py in VSCode and run the code.
+
+You should see output like:
+
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: xxx-xxx-xxx
+
+Open a web browser and go to http://127.0.0.1:5000/. The CampusJobs application should appear.
+
+### Usage
+Homepage: General information and login/register buttons.
+
+Account Creation:
+
+Students can register using their school email address ending with .edu.tr.
+
+Employers can register with any email address.
+
+Passwords must be at least 8 characters long and include uppercase, lowercase letters, and numbers.
+
+Login: Users log in with their registered email and password.
+
+Student Interface:
+View Listings: Filter and sort all active job postings.
+
+Favorites: Add job postings to favorites for easy tracking.
+
+Apply: Use the "Apply via Email" button in job details to contact the employer's email address.
+
+Employer Interface:
+Add Job Posting: Create new job listings.
+
+My Listings: View, remove and update job postings they have created.
+
+### Notes
+This project was developed for educational purposes. Some advanced security features (e.g., extensive XSS protection, CSRF tokens) and complex features (such as email verification and password reset) are not included.
+
+Passwords are securely hashed in the database using the werkzeug.security library.
+
+The database schema and relationships were designed according to CEIT390 course requirements.
+
+Happy testing!
