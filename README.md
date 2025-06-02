@@ -31,7 +31,7 @@ This section outlines the steps to set up and run the project locally.
 
 ### 2. Obtain Project Files
 
-- extract campusjobs.py to a folder that you want.
+- extract campusjobs-main.zip to a folder that you want.
 
 You will need the following files to run the project:
 - `campusjobs.py` &nbsp;&nbsp;&nbsp;*(Python code for the Flask app)*
