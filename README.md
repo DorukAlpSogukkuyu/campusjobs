@@ -43,14 +43,40 @@ Open a terminal (Command Prompt or PowerShell) and run:
 pip install Flask psycopg2-binary Werkzeug
 ```
 
-4. Set Up the Database
-Open the table_creation.txt file inside the project archive, copy the SQL commands.
+### 4. Set Up the Database
+4.1 Open pgAdmin
 
-Open pgAdmin, create a new database (e.g., campusjobs).
+    Launch pgAdmin on your computer.
 
-In the Query Tool, paste and execute the SQL commands to set up the schema.
+4.2 Create a New Database
 
-Optionally, insert sample data from sample_data.txt if you want. You can copy, paste and execute in the query tool
+    Right-click on Databases in the left panel.
+
+    Select Create > Database...
+
+    Enter a name (e.g., campusjobs) and click Save.
+
+4.2 Create the Tables
+
+    Select your new database from the left panel.
+
+    Click on Tools > Query Tool.
+
+    Open the project folder on your computer and find the file named table_creation.txt.
+
+    Copy all the SQL code from table_creation.txt.
+
+    Paste the copied code into the Query Tool in pgAdmin.
+
+    Click the Execute button to create the tables.
+
+4.3 Insert Sample Data
+
+    Open sample_data.txt from the project folder.
+
+    Copy all its content.
+
+    Paste into the Query Tool and execute again to insert sample records.
 
 ### 5. Update Database Connection Settings
 Open campusjobs.py in a text editor (VSCode). At the top of the file, update the database connection details according to your PostgreSQL setup:
