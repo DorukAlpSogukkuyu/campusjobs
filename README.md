@@ -27,6 +27,7 @@ This section outlines the steps to set up and run the project locally.
 - **Python 3.7+**: Ensure Python is installed on your machine. [Download Python](https://www.python.org/downloads/)
 - **PostgreSQL**: Make sure the PostgreSQL database server is installed and running. [Download PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
     - During installation, you will be asked to set a username (e.g., `postgres`) and password. You will need these later.
+    - If you get error in the installation part, change your systems regional form to United States at windows>system>time and language>regional form
 - **pgAdmin**: A database management tool like pgAdmin is recommended for easier database management. You should get this when you download and install PostgreSQL.
 
 ### 2. Obtain Project Files
