@@ -75,7 +75,7 @@ python -m pip install Flask psycopg2-binary Werkzeug
 - Paste the copied code into the Query Tool in pgAdmin.
 - Click the **Execute** button to create the tables.
 
-#### 4.4 Insert Sample Data (Optional)
+#### 4.4 Insert Sample Data
 - Open `sample_data.txt` from the project folder.
 - Copy all its content.
 - Paste into the Query Tool and execute again to insert sample records.
