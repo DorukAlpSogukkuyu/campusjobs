@@ -1,3 +1,4 @@
+-- Mevcut İşveren Verileri
 INSERT INTO employers (first_name, last_name, email, password_hash, company_name, created_at) VALUES
 ('Zeynel', 'Çilli', 'zeynel.cilli.company@example.com', 'hashed_password_placeholder_1', 'Zeynel Çilli', '2025-05-22'),
 ('Altan', 'Pizzacı', 'pizzaci.altan.company@example.com', 'hashed_password_placeholder_2', 'Pizzacı Altan', '2025-05-22'),
@@ -30,6 +31,7 @@ INSERT INTO employers (first_name, last_name, email, password_hash, company_name
 ('Arabica', 'Coffee', 'arabica.coffee.odtu.company@example.com', 'hashed_password_placeholder_29', 'Arabica Coffee House ODTÜ - Çarşı', '2025-05-22'),
 ('Solvay 1927', 'Coffee', 'solvay.1927.coffee.company@example.com', 'hashed_password_placeholder_30', 'Solvay 1927 Coffee', '2025-05-22');
 
+-- Mevcut İş İlanı Verileri
 INSERT INTO jobs (title, description, working_days, working_hours, total_hours, daily_salary, hourly_salary, job_duration, job_type, location, contact_email, employer_id, created_at) VALUES
 ('Zeynel Çilli ODTÜ', 'ODTÜ kampüsünde ünlü tatlıcı, sıcak-soğuk tatlılar ve öğle yemekleri.', 'Pazartesi-Pazar', '09:00-22:00', 13, 800, 61.5, 'Sürekli', 'Restoran', 'ODTÜ Kampüsü, 06800 Çankaya/Ankara', 'zeynelcilli.ilan@gmail.com', 1, '2025-05-22'),
 ('Pizzacı Altan', 'ODTÜ Çarşıda pizza çeşitleri, hızlı servis.', 'Pazartesi-Pazar', '11:00-21:30', 10.5, 900, 85.7, 'Sürekli', 'Pizza Restoranı', 'ODTÜ Çarşı AVM No:8, 06800 Çankaya/Ankara', 'pizzacialtan.ilan@outlook.com', 2, '2025-05-22'),
@@ -50,9 +52,9 @@ INSERT INTO jobs (title, description, working_days, working_hours, total_hours, 
 ('Naturel Cafe', 'Doğal ürünlerle kahvaltı ve ev yemekleri.', 'Pazartesi-Pazar', '08:00-22:00', 14, 750, 53.5, 'Sürekli', 'Restoran', 'ODTÜ Makine, 06800 Çankaya/Ankara', 'naturelcafe.ilan@gmail.com', 17, '2025-05-22'),
 ('Coffee Çimen', 'Kahve ve sandviç seçenekleri, geniş oturma.', 'Pazartesi-Pazar', '06:00-23:00', 17, 700, 41.1, 'Sürekli', 'Kafe', 'ODTÜ İsa Demiray Yurdu, 06800 Çankaya/Ankara', 'coffeecimen.ilan@outlook.com', 18, '2025-05-22'),
 ('Central ODTÜ Teknokent', 'Teknokentte kafe ve sıcak yemek servisi.', 'Pazartesi-Pazar', '08:00-00:00', 16, 800, 50.0, 'Sürekli', 'Kafe', 'Teknokent Silikon Bloklar, 06800 Çankaya/Ankara', 'centralodtuteknokent.ilan@gmail.com', 19, '2025-05-22'),
-('Komagene Etşiz Çiğ Köfte (Tekrar)', 'Vegan çiğ köfte, dürüm ve paket servis. Farklı bir lokasyon veya detay olabilir.', 'Pazartesi-Pazar', '10:00-23:00', 13, 600, 46.1, 'Sürekli', 'Çiğ Köfte', 'ODTÜ Küme Evler (Alternatif Şube), 06530 Çankaya/Ankara', 'komagene.ilan2@outlook.com', 4, '2025-05-22'),
+('Komagene Etşiz Çiğ Köfte Teknokent', 'Vegan çiğ köfte, dürüm ve paket servis. Farklı bir lokasyon veya detay olabilir.', 'Pazartesi-Pazar', '10:00-23:00', 13, 600, 46.1, 'Sürekli', 'Çiğ Köfte', 'ODTÜ Küme Evler (Alternatif Şube), 06530 Çankaya/Ankara', 'komagene.ilan2@outlook.com', 4, '2025-05-22'),
 ('ODTÜ 5. Yurt Kantini', 'Yemekhane ve kantin hizmeti.', 'Pazartesi-Pazar', '07:30-23:30', 16, 700, 43.7, 'Sürekli', 'Kantin', 'ODTÜ 5. Yurt, 06800 Çankaya/Ankara', 'odtu5yurtkantini.ilan@gmail.com', 20, '2025-05-22'),
-('Uptown Cafe', 'Çatı katında, manzaralı ve geniş iç/dış oturma alanı.', 'Pazartesi-Pazar', '11:00-22:00', 11, 800, 72.7, 'Sürekli', 'Kafe', 'ODTÜ Kültür ve Kongre Merkezi, 06800 Çankaya/Ankara', 'uptowncafe.ilan@outlook.com', 21, '2025-05-22'), -- URL yerine e-posta oluşturuldu
+('Uptown Cafe', 'Çatı katında, manzaralı ve geniş iç/dış oturma alanı.', 'Pazartesi-Pazar', '11:00-22:00', 11, 800, 72.7, 'Sürekli', 'Kafe', 'ODTÜ Kültür ve Kongre Merkezi, 06800 Çankaya/Ankara', 'uptowncafe.ilan@outlook.com', 21, '2025-05-22'),
 ('ODTÜ Fizik Kantini', 'Kahvaltı, öğle yemeği ve atıştırmalıklar.', 'Pazartesi-Cuma', '07:00-18:00', 11, 500, 45.4, 'Sürekli', 'Kantin', 'ODTÜ Fizik, 06800 Çankaya/Ankara', 'odtufizikkantini.ilan@gmail.com', 22, '2025-05-22'),
 ('Sunshine Cafe', 'Sıcak içecekler, sandviçler ve çeşitli menüler.', 'Pazartesi-Pazar', '09:30-00:00', 14.5, 850, 58.6, 'Sürekli', 'Kafe', 'ODTÜ Kampüsü, 06800 Çankaya/Ankara', 'sunshinecafe.ilan@outlook.com', 23, '2025-05-22'),
 ('Maydanoz Döner ODTÜ', 'Özel soslu döner, dürüm ve menüler.', 'Pazartesi-Pazar', '10:00-03:00', 17, 800, 47.0, 'Sürekli', 'Fast Food', 'ODTÜ Kampüsü, 06800 Çankaya/Ankara', 'maydanozdoner.ilan@gmail.com', 24, '2025-05-22'),
@@ -63,3 +65,58 @@ INSERT INTO jobs (title, description, working_days, working_hours, total_hours, 
 ('Arabica Coffee House ODTÜ - Çarşı', 'Kahve, sandviç ve tatlı çeşitleri.', 'Pazartesi-Pazar', '08:00-23:00', 15, 850, 56.7, 'Sürekli', 'Kahve Dükkanı', 'ODTÜ Kampüsü, 06800 Çankaya/Ankara', 'arabicacoffeeodtu.ilan@outlook.com', 29, '2025-05-22'),
 ('Solvay 1927 Coffee', 'Kahve, sandviç, tatlı ve hafif atıştırmalıklar.', 'Pazartesi-Pazar', '08:00-23:30', 15.5, 800, 51.6, 'Sürekli', 'Kafe', 'ODTÜ Çarşı, 06531 Çankaya/Ankara', 'solvay1927coffee.ilan@gmail.com', 30, '2025-05-22');
 
+
+-- YENİ EKLENEN ÖĞRENCİ VERİLERİ
+-- NOT: Şifreler yer tutucudur. Gerçek bir uygulamada bu şekilde saklanmamalıdır.
+-- Bu komutlar çalıştırıldığında öğrencilerin ID'lerinin sırasıyla 1, 2, 3, 4, 5 olacağı varsayılmıştır.
+INSERT INTO students (first_name, last_name, school_email, password_hash, created_at) VALUES
+('Doruk', 'Alp', 'doruk.alp@metu.edu.tr', 'pbkdf2:sha256:260000$placeholderhash1$1d1d1d1d1', '2025-05-22'),
+('Mert', 'Gedik', 'mert.gedik@metu.edu.tr', 'pbkdf2:sha256:260000$placeholderhash2$2d2d2d2d2', '2025-05-22'),
+('Boran', 'Yıldız', 'boran.yildiz@metu.edu.tr', 'pbkdf2:sha256:260000$placeholderhash3$3d3d3d3d3', '2025-05-22'),
+('İrem', 'Demir', 'irem.demir@metu.edu.tr', 'pbkdf2:sha256:260000$placeholderhash4$4d4d4d4d4', '2025-05-22'),
+('Mehmet', 'Kaya', 'mehmet.kaya@metu.edu.tr', 'pbkdf2:sha256:260000$placeholderhash5$5d5d5d5d5', '2025-05-22');
+
+
+-- YENİ EKLENEN FAVORİ İLAN VERİLERİ
+-- Hangi öğrencinin (student_id) hangi ilanı (job_id) favorilediğini belirtir.
+-- student_id'ler yukarıda eklenen öğrencilerin ID'leriyle eşleşmelidir. (Doruk=1, Mert=2, Boran=3, İrem=4, Mehmet=5)
+
+-- Doruk'un favorileri (student_id = 1)
+INSERT INTO favorites (student_id, job_id, created_at) VALUES
+(1, 2, '2025-05-22'),
+(1, 5, '2025-05-22'),
+(1, 10, '2025-05-22'),
+(1, 15, '2025-05-22'),
+(1, 20, '2025-05-22');
+
+-- Mert'in favorileri (student_id = 2)
+INSERT INTO favorites (student_id, job_id, created_at) VALUES
+(2, 3, '2025-05-22'),
+(2, 6, '2025-05-22'),
+(2, 11, '2025-05-22'),
+(2, 16, '2025-05-22'),
+(2, 21, '2025-05-22');
+
+-- Boran'ın favorileri (student_id = 3)
+INSERT INTO favorites (student_id, job_id, created_at) VALUES
+(3, 4, '2025-05-22'),
+(3, 7, '2025-05-22'),
+(3, 12, '2025-05-22'),
+(3, 17, '2025-05-22'),
+(3, 22, '2025-05-22');
+
+-- İrem'in favorileri (student_id = 4)
+INSERT INTO favorites (student_id, job_id, created_at) VALUES
+(4, 8, '2025-05-22'),
+(4, 9, '2025-05-22'),
+(4, 13, '2025-05-22'),
+(4, 18, '2025-05-22'),
+(4, 23, '2025-05-22');
+
+-- Mehmet'in favorileri (student_id = 5)
+INSERT INTO favorites (student_id, job_id, created_at) VALUES
+(5, 1, '2025-05-22'),
+(5, 14, '2025-05-22'),
+(5, 19, '2025-05-22'),
+(5, 24, '2025-05-22'),
+(5, 25, '2025-05-22');
