@@ -65,10 +65,7 @@ INSERT INTO jobs (title, description, working_days, working_hours, total_hours, 
 ('Arabica Coffee House ODTÜ - Çarşı', 'Kahve, sandviç ve tatlı çeşitleri.', 'Pazartesi-Pazar', '08:00-23:00', 15, 850, 56.7, 'Sürekli', 'Kahve Dükkanı', 'ODTÜ Kampüsü, 06800 Çankaya/Ankara', 'arabicacoffeeodtu.ilan@outlook.com', 29, '2025-05-22'),
 ('Solvay 1927 Coffee', 'Kahve, sandviç, tatlı ve hafif atıştırmalıklar.', 'Pazartesi-Pazar', '08:00-23:30', 15.5, 800, 51.6, 'Sürekli', 'Kafe', 'ODTÜ Çarşı, 06531 Çankaya/Ankara', 'solvay1927coffee.ilan@gmail.com', 30, '2025-05-22');
 
-
--- YENİ EKLENEN ÖĞRENCİ VERİLERİ
--- NOT: Şifreler yer tutucudur. Gerçek bir uygulamada bu şekilde saklanmamalıdır.
--- Bu komutlar çalıştırıldığında öğrencilerin ID'lerinin sırasıyla 1, 2, 3, 4, 5 olacağı varsayılmıştır.
+-- Ogrenci olusturma
 INSERT INTO students (first_name, last_name, school_email, password_hash, created_at) VALUES
 ('Doruk', 'Alp', 'doruk.alp@metu.edu.tr', 'pbkdf2:sha256:260000$placeholderhash1$1d1d1d1d1', '2025-05-22'),
 ('Mert', 'Gedik', 'mert.gedik@metu.edu.tr', 'pbkdf2:sha256:260000$placeholderhash2$2d2d2d2d2', '2025-05-22'),
@@ -76,12 +73,7 @@ INSERT INTO students (first_name, last_name, school_email, password_hash, create
 ('İrem', 'Demir', 'irem.demir@metu.edu.tr', 'pbkdf2:sha256:260000$placeholderhash4$4d4d4d4d4', '2025-05-22'),
 ('Mehmet', 'Kaya', 'mehmet.kaya@metu.edu.tr', 'pbkdf2:sha256:260000$placeholderhash5$5d5d5d5d5', '2025-05-22');
 
-
--- YENİ EKLENEN FAVORİ İLAN VERİLERİ
--- Hangi öğrencinin (student_id) hangi ilanı (job_id) favorilediğini belirtir.
--- student_id'ler yukarıda eklenen öğrencilerin ID'leriyle eşleşmelidir. (Doruk=1, Mert=2, Boran=3, İrem=4, Mehmet=5)
-
--- Doruk'un favorileri (student_id = 1)
+-- Ogrencilerin Favorileri
 INSERT INTO favorites (student_id, job_id, created_at) VALUES
 (1, 2, '2025-05-22'),
 (1, 5, '2025-05-22'),
@@ -89,7 +81,6 @@ INSERT INTO favorites (student_id, job_id, created_at) VALUES
 (1, 15, '2025-05-22'),
 (1, 20, '2025-05-22');
 
--- Mert'in favorileri (student_id = 2)
 INSERT INTO favorites (student_id, job_id, created_at) VALUES
 (2, 3, '2025-05-22'),
 (2, 6, '2025-05-22'),
@@ -97,7 +88,6 @@ INSERT INTO favorites (student_id, job_id, created_at) VALUES
 (2, 16, '2025-05-22'),
 (2, 21, '2025-05-22');
 
--- Boran'ın favorileri (student_id = 3)
 INSERT INTO favorites (student_id, job_id, created_at) VALUES
 (3, 4, '2025-05-22'),
 (3, 7, '2025-05-22'),
@@ -105,7 +95,6 @@ INSERT INTO favorites (student_id, job_id, created_at) VALUES
 (3, 17, '2025-05-22'),
 (3, 22, '2025-05-22');
 
--- İrem'in favorileri (student_id = 4)
 INSERT INTO favorites (student_id, job_id, created_at) VALUES
 (4, 8, '2025-05-22'),
 (4, 9, '2025-05-22'),
@@ -113,7 +102,6 @@ INSERT INTO favorites (student_id, job_id, created_at) VALUES
 (4, 18, '2025-05-22'),
 (4, 23, '2025-05-22');
 
--- Mehmet'in favorileri (student_id = 5)
 INSERT INTO favorites (student_id, job_id, created_at) VALUES
 (5, 1, '2025-05-22'),
 (5, 14, '2025-05-22'),
